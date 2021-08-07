@@ -1,0 +1,153 @@
+<div class="reg">
+  <h1>CATS - STUDENT</h1>
+  <h2>SIGN UP</h2>
+    <div class="card shadow">
+        <div class="card-body">
+         <i><h3 class="card-title">Registration Form</h3></i>
+        <b><i><p class="card-text">*Marked Fields are Mandatory</p></i></b>
+        <br>
+        <form>
+          <div class="row mb-3 form-group">
+            <label  class="col-sm-2 col-form-label">First name *</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="fn">
+            </div>
+          </div>
+          <div class="row mb-3 form-group">
+            <label  class="col-sm-2 col-form-label">Middle Name *</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="mn">
+            </div>
+          </div>
+          <div class="row mb-3 form-group">
+            <label  class="col-sm-2 col-form-label">Last Name *</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="ln">
+            </div>
+          </div>
+          <div class="row mb-3 form-group">
+          <label  class="col-sm-2 col-form-label">Father's Name *</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="fnm">
+          </div>
+        </div>
+        <div class="row mb-3 form-group">
+          <label  class="col-sm-2 col-form-label">Mother's Name *</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="mnm">
+          </div>
+        </div>
+        <div class="row mb-3 form-group">
+          <label  class="col-sm-2 col-form-label">College Roll Number *</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="crn">
+          </div>
+        </div>
+        <div class="row mb-3 form-group">
+          <label  class="col-sm-2 col-form-label">Mobile Number *</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="mnm">
+          </div>
+        </div>
+        <div class="row mb-3 form-group">
+          <label  class="col-sm-2 col-form-label">Alternat Mobile Number *</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="anm">
+          </div>
+        </div>
+        <div class="row mb-3 form-group">
+          <label  class="col-sm-2 col-form-label">Father's Mobile Number *</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="fnmn">
+          </div>
+        </div>
+        <div class="row mb-3 form-group">
+          <label  class="col-sm-2 col-form-label">Mother's Mobile Number *</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="mnmn">
+          </div>
+        </div>
+        <fieldset class="row mb-3 form-group">
+          <legend class="col-form-label col-sm-2 pt-0">Gender *</legend>
+          <div class="col-sm-10">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+              <label class="form-check-label" >
+                  MALE
+              </label>
+            </div>
+            <div class="form-check ">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+              <label class="form-check-label">
+                FEMALE
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <div class="row mb-3 form-group" [(ngModel)] = "courseselected" (ngModelChange)="oncourseselected($event)">
+          <label  class="col-sm-2 col-form-label">Course *</label>
+          <div class="col-sm-3">
+            <select class="form-select">
+              <option *ngFor="let std of studentcourse" [value]="std.id">{{std.name}}</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="row mb-3 form-group" *ngIf="ded">
+          <label  class="col-sm-2 col-form-label" >Branch *</label>
+          <div class="col-sm-3">
+            <select class="form-select ">
+              <option selected>Choose...</option>
+              <option value="1">CIVIL</option>
+              <option value="2">EEE</option>
+              <option value="3">MECHANICAL</option>
+              <option value="4">ECE</option>
+              <option value="5">CSE</option>
+            </select>
+          </div>
+        </div>
+        <div class="row mb-3 form-group">
+          <label  class="col-sm-2 col-form-label">Passwrd *</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="ln">
+          </div>
+        </div>
+        <div class="row mb-3 form-group">
+          <label  class="col-sm-2 col-form-label">Confirm Password *</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="ln">
+          </div>
+        </div>
+        <div class="form-group">
+         <label class="lbl">Photo *</label>
+          <button type="button" class="btn btn-primary btn-lg">choose file</button>
+        </div>
+        <div class="form-group">
+          <label class="lbl">Photo *</label>
+          <button type="button" class="btn btn-primary btn-lg">choose file</button>
+        </div>
+        <br>
+        <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" >
+            I Accept the terms and conditions          
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" >
+            I Accept that the above details are true in my knowledge
+          </label>
+        </div>
+      </div>
+        <br>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary btn-lg">Sign in</button>
+        </div>
+        </form>
+        </div>
+      </div>
+</div>

@@ -1,0 +1,20 @@
+h1,h2{
+    text-align: center;
+    color:white;
+}
+.card{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+.card-text{
+    color: red;
+}
+.reg{
+    background-color:  grey;
+    
+}
+.lbl{
+    margin-right: 160px;
+    margin-top: 20px;
+}

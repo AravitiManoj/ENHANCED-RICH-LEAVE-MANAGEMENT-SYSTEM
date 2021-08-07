@@ -1,0 +1,11 @@
+.navbar{
+    background-color: whitesmoke;
+}
+.navbar-nav .nav-item {
+    padding-right: 2px;
+  
+    
+}
+.navbar-brand{
+    color: black;
+}

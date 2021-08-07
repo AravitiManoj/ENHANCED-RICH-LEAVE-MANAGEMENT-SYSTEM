@@ -1,0 +1,16 @@
+.card-title{
+    color: green;
+}
+.card{
+    margin-left: 245px;
+    margin-right: 245px;
+    margin-top: 80px;
+}
+h1,h4{
+   color: green;
+   text-align: center;
+}
+P{
+    text-align: left;
+    padding-left: 10px;
+}
